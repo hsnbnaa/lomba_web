@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(118, 202, 219),
+    rgb(16, 118, 213)
+  );
+}
+.utama {
+  margin-top: 30px;
+  display: flex;
+  justify-content: right;
+}
+.head {
+  display: flex;
+  margin-right: 40px;
+}
+#head {
+  margin-right: 40px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+#head1 {
+  margin-right: 40px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+#logo {
+  margin-right: 730px;
+}
+.gambar {
+  display: flex;
+}
+.awal {
+  display: flex;
+  justify-content: end;
+}
+#cari {
+  border-radius: 40px;
+  width: 250px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.capt {
+  margin-right: 50px;
+}
+.mengapa {
+  margin-left: 70px;
+}
+#why {
+  margin-left: 70px;
+}
+.isi {
+  display: flex;
+}
+.konten {
+  background-color: white;
+  border-radius: 100px;
+  width: 610px;
+  height: 110px;
+  text-align: center;
+}
+.konten1 {
+  background-color: white;
+  border-radius: 100px;
+  width: 610px;
+  height: 110px;
+  text-align: center;
+}
+.sampul1 {
+  margin-top: 50px;
+}
+.sampul {
+  display: flex;
+  margin-top: 50px;
+  justify-content: end;
+}
+#gam {
+  margin-bottom: 31px;
+}
+
+.kotak {
+  background-color: rgb(191, 191, 191);
+  width: 1100px;
+  height: 300px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.bingkai {
+  width: 160px;
+  height: 160px;
+  border-radius: 160px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bingkai1 {
+  display: flex;
+  justify-content: center;
+}
+.atas {
+  margin-left: 30px;
+}
+#icon {
+  object-fit: cover;
+}

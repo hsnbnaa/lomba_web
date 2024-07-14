@@ -84,9 +84,9 @@ body{
 
 
 .kotak{
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(255, 255, 255);
     width: 1100px;
-    height: 300px;
+    height: 310px;
     border-radius: 50px;
     align-items: center;
     justify-content: center;
@@ -96,7 +96,7 @@ body{
     width: 160px;
     height: 160px;
     border-radius: 160px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(31, 214, 251);
     margin: 10px;
     overflow: hidden;
     display: flex;
@@ -113,3 +113,42 @@ body{
 #icon{
     object-fit: cover;
 }
+.tulis{
+    text-align: center;
+}
+.tiga{
+    width: 100%;
+    height: 350px;
+    background-color: #ccc;
+    background-image: linear-gradient(to left, blue, lightblue);
+  /* Sesuaikan warna sesuai keinginan */
+  height: 200px;  /* Atur tinggi elemen */
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ccc;
+    text-align: center;
+    position: relative;
+  }
+  
+  
+  
+  .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  .pesan{
+    margin-top: 50px;
+    justify-content: end;
+    align-content: end;
+    background-color: aqua;
+  }
+  

@@ -118,11 +118,42 @@ body{
 }
 .tiga{
     width: 100%;
-    height: 350px;
-    background-color: #ccc;
-    background-image: linear-gradient(to left, blue, lightblue);
-  /* Sesuaikan warna sesuai keinginan */
-  height: 200px;  /* Atur tinggi elemen */
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+}
+.judul{
+    background-image: linear-gradient(to bottom, blue, lightblue);
+    width: 300px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;    
+}
+
+.petak1{
+    background-image: linear-gradient(to right, rgb(49, 248, 42), rgb(154, 255, 45));
+    width: 400px;
+    height: 150px;
+    align-self: center;
+    margin: 20px;
+    border-radius: 30px;
+}
+.petak2{
+    background-image: linear-gradient(to right, rgb(248, 87, 42), rgb(255, 167, 45));
+    width: 400px;
+    height: 150px;
+    align-self: center;
+    margin: 20px;
+    border-radius: 30px;
+}
+.petak3{
+    background-image: linear-gradient(to right, rgb(231, 248, 42), rgb(139, 255, 45));
+    width: 400px;
+    height: 150px;
+    align-self: center;
+    margin: 20px;
+    border-radius: 30px;
 }
 
 .container {
@@ -200,8 +231,34 @@ body{
 .dalam{
     float: left;
 }
-.akhir{
+.akhir1{
     background-color: #fff;
     width: 100%;
+    height: 350px;
+}
+.akhir{
+    width: 100%;
     height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.foot{
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.foot1{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.foot2{
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.con{
+    display: flex;
+}
+.tuls{
+    text-align: center;
+    color: #a5a5a5;
 }

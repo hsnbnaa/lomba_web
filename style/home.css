@@ -57,10 +57,22 @@ body{
 .mengapa{
     margin-left: 70px;
 }
-    #why{
-        margin-left: 70px;
-        font-family: 'Josh', sans-serif;
-    }
+#why{
+    margin-left: 70px;
+    font-family: 'Josh', sans-serif;
+}
+.highlight-c {
+    color: #F2525A; /* Ganti dengan warna yang diinginkan */
+}
+.highlight-a {
+    color: #FEAA1A; /* Ganti dengan warna yang diinginkan */
+}
+.highlight-r {
+    color: #6765E0; /* Ganti dengan warna yang diinginkan */
+}
+.highlight-e {
+    color: #5DE1E5; /* Ganti dengan warna yang diinginkan */
+}
 .isi{
     display: flex;
 }
@@ -135,6 +147,9 @@ body{
     background-color: #ffffff;
     display: flex;
     align-items: center;
+}
+#ada{
+    color: white;
 }
 .judul{
     background-image: linear-gradient(to bottom, rgb(242, 0, 255), lightblue);

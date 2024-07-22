@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   statusOptions.forEach((option) => {
     option.addEventListener("change", (event) => {
       if (event.target.checked) {
-        if (event.target.value == "murid") {
+        if (event.target.value == "siswa") {
           statusCard.innerHTML = `
                     <input
                       type="text"

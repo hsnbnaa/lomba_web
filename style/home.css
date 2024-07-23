@@ -6,7 +6,7 @@ body{
 }
 .besar{
     width: 100%;
-    height: 700px;
+    height: 600px;
     background-image: linear-gradient(to right, rgb(139, 237, 231), rgb(70, 150, 224));
     margin: 0;
     border-bottom-left-radius: 40px;
@@ -37,7 +37,7 @@ body{
 }
 .awal{
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 .highlight {
     color: #A677CB; /* Ganti dengan warna yang kamu inginkan */
@@ -52,10 +52,12 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .capt{
+    margin-left: 100px;
     margin-right: 50px;
+    margin-top: 100px;
 }
-.mengapa{
-    margin-left: 70px;
+.bungkus{
+    justify-content: center;
 }
 #why{
     margin-left: 70px;
@@ -87,7 +89,7 @@ body{
     text-align: center;
 }
 .konten1{
-    margin-top: 15px;
+    margin-top: 5px;
     background-color: white;
     border-radius: 100px;
     width: 610px;
@@ -172,8 +174,8 @@ body{
     color: white;
 }
 .judul{
-    background-image: linear-gradient(to bottom, rgb(242, 0, 255), lightblue);
-    width: 300px;
+    background-image: linear-gradient(to bottom, rgb(0, 17, 255), lightblue);
+    width: 400px;
     height: 100%;
     text-align: center;
     align-items: center;
@@ -299,16 +301,23 @@ body{
 .cara{
     background-image: linear-gradient(to bottom, rgb(135, 220, 253), rgb(66, 113, 157));
     width: 350px;
-    height: 200px;
-    margin: 30px;
+    height: 225px;
     border-radius: 20px;
+    margin: 20px;
+}
+#lam{
+    margin-left: 10px;
 }
 .empat{
     display: flex;
+    width: 100%;
     justify-content: center;
 }
 #tulis{
     text-align: center;
+}
+.bungkus{
+    justify-content: center;
 }
 .isi{
     display: flex;
@@ -339,6 +348,7 @@ body{
 }
 .dalam{
     float: left;
+    margin-left: 10px;
 }
 .akhir1{
     background-color: #fff;

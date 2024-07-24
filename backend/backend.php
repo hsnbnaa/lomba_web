@@ -13,25 +13,51 @@ if ($conn->connect_error) {
 }
 
 function login($conn) {
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT username FROM user WHERE username = ? AND pass = ?");
-    if ($stmt === false) {
-        die("Error preparing statement: " . $conn->error);
+    // Get the list of all tables in the database
+    $result = $conn->query("SHOW TABLES");
+    if ($result === false) {
+        die("Error fetching tables: " . $conn->error);
     }
 
-    $stmt->bind_param("ss", $username, $password);
-    $stmt->execute();
-    $stmt->store_result();
+    $tables = [];
+    while ($row = $result->fetch_array()) {
+        $tables[] = $row[0];
+    }
 
-    if ($stmt->num_rows > 0) {
+    $found = false;
+
+    foreach ($tables as $table) {
+        // Check if the table has 'username' and 'pass' columns
+        $result = $conn->query("SHOW COLUMNS FROM $table LIKE 'email'");
+        $usernameExists = $result && $result->num_rows > 0;
+
+        if ($usernameExists) {
+            $stmt = $conn->prepare("SELECT email FROM $table WHERE email = ? AND pass = ?");
+            if ($stmt === false) {
+                die("Error preparing statement: " . $conn->error);
+            }
+
+            $stmt->bind_param("ss", $email, $password);
+            $stmt->execute();
+            $stmt->store_result();
+
+            if ($stmt->num_rows > 0) {
+                $found = true;
+                break;
+            }
+
+            $stmt->close();
+        }
+    }
+
+    if ($found) {
         echo json_encode(['status' => 'success', 'message' => 'Login berhasil!']);
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Username atau password salah!']);
     }
-
-    $stmt->close();
 }
 
 function signup($conn) {

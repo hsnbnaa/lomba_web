@@ -46,7 +46,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
     <nav class="navbar">
       <div class="logo-icon">
         <a href="home.html">
-          <img src="img/Screenshot_2024-07-13_232152-removebg.png" alt="" />
+          <img src="img/logo-icon.png" alt="" />
           <span>EDU - CARE</span>
         </a>
       </div>

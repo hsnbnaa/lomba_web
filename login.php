@@ -41,7 +41,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
                 <h4>Masuk</h4>
                 <p>Belum punya akun? <a href="signup.php">Buat sekarang</a></p>
                 <div class="biodata">
-                    <input type="text" id="email" name="email" placeholder="Alamat Email" />
+                    <input type="email" id="email" name="email" placeholder="Alamat Email" />
                     <div class="pass-container" id="pass-container">
                         <input type="password" id="password" name="password" placeholder="Kata Sandi" />
                         <img src="img/eye-off.png" id="eye-icon" />

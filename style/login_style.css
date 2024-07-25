@@ -5,9 +5,14 @@ body {
   padding: 0;
   height: 100vh;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(135deg, #70d3e9, #122aa7);
+  background-image: url("../img/bg-log-1.png"), url("../img/bg-log-2.png"),
+    url("../img/bg-log-3.png"), linear-gradient(135deg, #70d3e9, #122aa7);
+  background-position: top right, bottom left, bottom right, center;
+  background-size: 550px 350px, auto, 700px 550px, cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -81,12 +86,12 @@ body {
 }
 
 .login-card p a {
-    text-decoration: none;
-    color: #66A1E7;
+  text-decoration: none;
+  color: #66a1e7;
 }
 
 .login-card p a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 input::placeholder {
@@ -148,24 +153,24 @@ input::placeholder {
 }
 
 .remember-me-container {
-    align-items: center;
-    margin-left: 5px;
+  align-items: center;
+  margin-left: 5px;
 }
 
 .remember-me label {
-    color: #666161;
-    font-weight: 600;
+  color: #666161;
+  font-weight: 600;
 }
 
 .remember-me a {
-    text-decoration: none;
-    color: #66A1E7;
-    margin-right: 10px;
-    font-weight: 600;
+  text-decoration: none;
+  color: #66a1e7;
+  margin-right: 10px;
+  font-weight: 600;
 }
 
 .remember-me a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Button submit */

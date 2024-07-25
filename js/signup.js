@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 // Mengganti warna ketika text di input.
 const textInputs = document.querySelectorAll(
-  'input[type="text"], input[type="password"]'
+  'input[type="text"], input[type="email"], input[type="number"], input[type="password"]'
 );
 
 textInputs.forEach((input) => {

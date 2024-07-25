@@ -5,7 +5,11 @@ body {
   padding: 0;
   height: 100vh;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(135deg, #70d3e9, #122aa7);
+  background-image: url("../img/bg-log-1.png"), url("../img/bg-log-2.png"),
+    linear-gradient(135deg, #70d3e9, #122aa7);
+  background-position: top right, bottom left, bottom right, center;
+  background-size: 550px 350px, auto, cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 /* Navbar */
@@ -166,6 +170,18 @@ input::placeholder {
 
 .first-line #numberPhone {
   margin-left: 10px;
+}
+
+/* Untuk selain firefox */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Untuk firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .biodata #email {

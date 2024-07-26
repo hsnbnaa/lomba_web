@@ -41,7 +41,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edu - Care</title>
-    <link rel="icon" href="img/logo-icon.png">
+    <link rel="icon" href="img/logo-icon.png" />
     <link rel="stylesheet" href="style/signup_style.css" />
 </head>
 
@@ -60,8 +60,9 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
         </div>
         <form method="POST" action="backend/backend.php?action=signup" id="signupForm" class="signup-right"
             onsubmit="handleSignup(event)">
-            <div class="signup-card">
+            <div class="signup-card" id="signup-step-1">
                 <h4>Pendaftaran Akun</h4>
+                <p class="desc">yuk isi form untuk melanjutkan</p>
                 <div class="status">
                     <p>Daftar sebagai :</p>
                     <div class="status-options">
@@ -98,16 +99,45 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
                         </div>
                     </div>
                 </div>
-                <p class="syarat">
-                    Dengan membuat akun, saya setuju dengan
-                    <span>syarat dan ketentuan</span> <br />serta
-                    <span>Ketentuan yang berlaku</span> di Edu - Care.
-                </p>
-                <button type="submit" id="signup-btn">Daftar</button>
+                <div class="footer" id="footer">
+                    <p class="syarat">
+                        Dengan membuat akun, saya setuju dengan
+                        <span>syarat dan ketentuan</span> <br />serta
+                        <span>Ketentuan yang berlaku</span> di Edu - Care.
+                    </p>
+                    <button type="button" id="next-btn" onclick="showNextStep()">Daftar</button>
+                </div>
             </div>
+
+            <div class="signup-card" id="signup-step-2" style="display: none;">
+                <h4>Hubungkan ke Sekolah</h4>
+                <p class="desc">Isi Form agar dapat terhubung dengan Sekolah anda</p>
+                <div class="school-data">
+                    <label for="provinsi">Provinsi</label>
+                    <select id="provinsi" name="provinsi" onchange="loadKota()">
+                    </select>
+                    <br />
+                    <label for="kota">Kota/Kabupaten</label>
+                    <select id="kota" name="kota" onchange="loadSekolah()">
+                    </select>
+                    <br />
+                    <label for="sekolah">Asal Sekolah</label>
+                    <select id="sekolah" name="sekolah">
+                    </select>
+                    <br />
+                    <label for="npsn">NPSN</label>
+                    <input type="text" id="npsn" name="npsn" placeholder="Masukkan Nomor NPSN" />
+                    <br />
+                    <div class="footer">
+                        <p>Dengan melanjutkan anda dapat terhubung dengan sekolah sesuai pilihan anda</p>
+                        <button type="button" id="next-btn" onclick="showLastStep()">Lanjut</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="signup-card" id="signup-step-3" style="display: none;"></div>
         </form>
     </section>
-
     <script src="js/signup.js"></script>
 </body>
 

@@ -86,6 +86,8 @@ function signup($conn) {
         }
         // Menggunakan prepared statement untuk keamanan
         $stmt = $conn->prepare("INSERT INTO siswa (fullname, phone, email, pass, token) VALUES (?, ?, ?, ?, ?)");
+        // Mengikat parameter ke statement
+        $stmt->bind_param("sssss", $fullname, $numberPhone, $email, $password, $data);
 
     } else if ($_POST['status'] == 'orangtua_wali') {
         $data = $_POST['namaAnak'];
@@ -106,9 +108,12 @@ function signup($conn) {
         }
 
         $stmt = $conn->prepare("INSERT INTO orangtua (fullname, phone, email, pass, anak) VALUES (?, ?, ?, ?, ?)");
+        // Mengikat parameter ke statement
+        $stmt->bind_param("sssss", $fullname, $numberPhone, $email, $password, $data);
 
     } else if ($_POST['status'] == 'guru') {
         $data = $_POST['mapel'];
+        $sekolah = $_POST['sekolah'];
 
         try {
             $sql = "CREATE TABLE IF NOT EXISTS guru (
@@ -117,7 +122,8 @@ function signup($conn) {
                 phone VARCHAR(20) NULL,
                 email VARCHAR(100) NULL,
                 pass VARCHAR(255) NULL,
-                mapel VARCHAR(100) NULL
+                mapel VARCHAR(100) NULL,
+                sekolah VARCHAR(100) NULL
             )";
         
             $conn->query($sql);
@@ -125,16 +131,15 @@ function signup($conn) {
             echo $e->getMessage();
         }
 
-        $stmt = $conn->prepare("INSERT INTO guru (fullname, phone, email, pass, mapel) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO guru (fullname, phone, email, pass, mapel, sekolah) VALUES (?, ?, ?, ?, ?, ?)");
+        // Mengikat parameter ke statement
+        $stmt->bind_param("ssssss", $fullname, $numberPhone, $email, $password, $data, $sekolah);
     }
 
     if ($stmt === false) {
         echo json_encode(['status' => 'error', 'message' => 'Kesalahan pada statement SQL: ' . $conn->error]);
         return;
     }
-
-    // Mengikat parameter ke statement
-    $stmt->bind_param("sssss", $fullname, $numberPhone, $email, $password, $data);
 
     // Menjalankan statement
     if ($stmt->execute() === TRUE) {
@@ -155,4 +160,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['action'])) {
     if ($_GET['action'] == 'signup') {
         signup($conn);
     }
-}
+} 

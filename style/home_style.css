@@ -12,6 +12,7 @@ body {
   font-family: "inter", sans-serif;
   background: linear-gradient(135deg, #70d3e9, #122aa7);
   min-height: 100vh;
+  font: 100% / 1.5 Raleway, sans-serif;
 }
 
 /* Navbar */
@@ -98,6 +99,7 @@ body {
 
 .hero-left h2 span {
   color: #a677cb;
+  text-shadow: none;
 }
 
 .hero-left p {
@@ -140,6 +142,27 @@ body {
 
 .hero-left .search-field input::placeholder {
   opacity: 0.7;
+}
+
+.typewriter {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  animation: typing-loop 8s steps(30, end) infinite, blink-caret .75s step-end infinite;
+}
+
+@keyframes typing-loop {
+  0% { width: 0 }
+  25% { width: 100% }
+  50% { width: 100% }
+  75% { width: 0 }
+  100% { width: 0 }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
 
 .hero-right {

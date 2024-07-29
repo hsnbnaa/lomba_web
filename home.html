@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Edu-Care</title>
     <link rel="icon" href="img/logo-icon.png" />
     <link
@@ -32,7 +35,8 @@
           MULAI <span>PETUALANGAN</span><br />BELAJARMU DENGAN <br />EDU - CARE
         </h2>
         <p class="typewriter">
-          EDU-CARE Bertujuan Untuk Memandu Dan <br> Memudahkan Perjalanan Belajar
+          <span class="line1">EDU-CARE Bertujuan Untuk Memandu Dan</span><br />
+          <span class="line2">Memudahkan Perjalanan Belajar</span>
         </p>
         <div class="search-field">
           <img src="img/search.png" alt="search-icon" />
@@ -367,5 +371,22 @@
     <div class="copyright">EDU-CARE All Right Reserved, 2024</div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/home.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const line1 = document.querySelector(".line1");
+        const line2 = document.querySelector(".line2");
+
+        line1.addEventListener("animationend", function () {
+          line1.style.borderRight = "none"; // Hilangkan border-right setelah animasi selesai
+          line2.style.display = "inline-block";
+          line2.style.animation =
+            "typing2 4s steps(30, end) forwards, blink-caret .75s step-end infinite";
+        });
+
+        line2.addEventListener("animationend", function () {
+          line2.style.borderRight = "none"; // Hilangkan border-right setelah animasi selesai
+        });
+      });
+    </script>
   </body>
 </html>

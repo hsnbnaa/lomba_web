@@ -5,7 +5,11 @@ body {
   padding: 0;
   height: 100vh;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(135deg, #70d3e9, #122aa7);
+  background-image: url("../img/bg-log-1.png"), url("../img/bg-log-2.png"),
+    linear-gradient(135deg, #70d3e9, #122aa7);
+  background-position: top right, bottom left, bottom right, center;
+  background-size: 550px 350px, auto, cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 /* Navbar */
@@ -72,6 +76,15 @@ body {
 .signup-card h4 {
   font-size: 20px;
   font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.signup-card .desc {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: #666161;
 }
 
 /* Status */
@@ -168,6 +181,18 @@ input::placeholder {
   margin-left: 10px;
 }
 
+/* Untuk selain firefox */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Untuk firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .biodata #email {
   width: 93%;
   height: 40px;
@@ -230,6 +255,7 @@ input::placeholder {
   color: #666161;
 }
 
+#next-btn,
 #signup-btn {
   text-align: center;
   width: 80%;
@@ -243,13 +269,14 @@ input::placeholder {
   background-color: #4288d9;
 }
 
-#signup-btn:hover {
+#signup-btn:hover,
+#next-btn:hover {
   color: black;
   background-color: #4288d9;
-  transition: 0.2s;
+  transition: all 0.4s ease;
 }
 
-.syarat {
+.footer {
   text-align: center;
   font-size: 8px;
   margin-top: 20px;
@@ -258,6 +285,80 @@ input::placeholder {
 .syarat span {
   color: #1196e1;
   cursor: pointer;
+}
+
+/* School Data */
+.school-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.school-data label {
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.school-data select {
+  padding: 10px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  align-items: normal;
+}
+
+.school-data input {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 14px;
+  border: 1px solid black;
+}
+
+.footer {
+  width: 90%;
+  justify-content: center;
+  margin: 0px 20px;
+}
+
+.footer p {
+  font-size: 11px;
+  color: #666161;
+}
+
+/* Result Data */
+.result-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.result-item p {
+  margin: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.result-item .result {
+  padding: 10px 0;
+  margin: 0px;
+  border: 1px solid black;
+  border-radius: 14px;
+}
+
+.result-data .footer {
+  margin-top: 15px;
 }
 
 /* Media Queries */

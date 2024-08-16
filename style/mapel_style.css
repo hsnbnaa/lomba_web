@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 30px 47px;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: row;
+  background-color: #dfeeff;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+.back-button {
+  width: 72px;
+  height: 72px;
+}
+
+.header {
+  padding: 14px 0 50px 50px;
+  background-image: url("../img/header-mapel.png");
+  background-repeat: no-repeat;
+  width: 1200px;
+  border-radius: 20px;
+}
+
+.header h2 {
+  font-size: 60px;
+  font-weight: 900;
+  color: white;
+}
+
+.header h4 {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: row;
+  padding-top: 34px;
+  justify-content: space-between;
+  width: 1240px;
+}
+
+.mapel {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 11px 36px 37px 29px;
+  border-radius: 20px;
+  width: 60%;
+  gap: 7px;
+}
+
+.mapel h4 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.mapel-pengantar,
+.mapel-tugas {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mapel-pengantar h3,
+.mapel-tugas h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.mapel-pengantar p,
+.mapel-pengantar ol,
+.mapel-tugas p,
+.mapel-tugas ol {
+  font-size: 20px;
+}
+
+.mapel-pengantar ol,
+.mapel-tugas ol {
+  margin: 0;
+  padding-left: 23px;
+  text-align: left;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  background-color: #3f54c4;
+  border-radius: 20px;
+  width: 30%;
+}
+
+.timeline h3 {
+  font-size: 25px;
+  font-weight: 800;
+  color: white;
+  padding-top: 22px;
+  padding-left: 23px;
+  margin-bottom: 14px;
+}
+
+.timeline-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 12px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px 10px 22px 11px;
+}
+
+.item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-left h6 {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.item-left .mapel-name {
+  color: #7c7575;
+}
+
+.timeline-item button {
+  color: white;
+  background-color: red;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 7px 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}

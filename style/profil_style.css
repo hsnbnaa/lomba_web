@@ -121,7 +121,7 @@ ul {
 }
 
 .kotak{
-    background-color: saddlebrown;
+    background-color: #67B1E6;
     width: 700px;
     height: 100px;
     border-radius: 20px;
@@ -139,6 +139,7 @@ ul {
     padding: 0;
     width: 100px;
     height: 30px;
+    border: 0;
     border-radius: 10px;
     background-color: white
 }
@@ -157,11 +158,129 @@ ul {
     margin-top: 15px;
 }
 
-.kotak2{
-    width: 450px;
-    height: 150px;
-    border-radius: 30px;
-    background-color: rgb(0, 162, 221);
+.bungkus{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.kotak21{
+    width: 400px;
+    height: 150px;
+    border-radius: 30px;
+    background-color: #2ED0FF;
+    margin: 10px;
+}
+
+.kotak22{
+  width: 400px;
+  height: 150px;
+  border-radius: 30px;
+  background-color: #C261FE;
+  margin: 10px;
+}
+
+.kotak23{
+  width: 400px;
+  height: 150px;
+  border-radius: 30px;
+  background-color: rgb(0, 162, 221);
+  margin: 10px;
+}
+
+.kotak31{
+  width: 250px;
+  height: 150px;
+  border-radius: 30px;
+  background-color: #FFCD4B;
+  margin: 10px; 
+}
+
+.kotak32{
+  width: 250px;
+  height: 150px;
+  border-radius: 30px;
+  background-color: #50FF76;
+  margin: 10px; 
+}
+
+.kotak33{
+  width: 250px;
+  height: 150px;
+  border-radius: 30px;
+  background-color: #70d3e9;
+  margin: 10px; 
+}
+
+.susun{
+  display: flex;
+}
+
+.kanan{
+  margin-left: 15px;
+}
+
+.notif{
+  width: 360px;
+  height: 350px;
+  background-color: #3F54C4;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.notif h1{
+  color: white;
+  padding: 40px;
+  padding-bottom: 0;
+}
+
+.petak12{
+  width: 300px;
+  height: 60px;
+  margin: 20px;
+  margin-left: 35px;
+  border-radius: 20px;
+  background-color: #FE7373;
+}
+
+.petak13{
+  width: 300px;
+  height: 60px;
+  margin: 20px;
+  margin-left: 35px;
+  border-radius: 20px;
+  background-color: #64DE2B;
+}
+
+.petak14{
+  width: 300px;
+  height: 60px;
+  margin: 20px;
+  margin-left: 35px;
+  border-radius: 20px;
+  background-color: #BED94F;
+}
+
+.timeline{
+  width: 360px;
+  height: 350px;
+  background-color: #3F54C4;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.timeline h1{
+  color: white;
+  padding: 40px;
+  padding-bottom: 0;
+}
+
+.petak2{
+  width: 300px;
+  height: 90px;
+  margin: 20px;
+  margin-left: 35px;
+  border-radius: 20px;
+  background-color: white;
+}
 

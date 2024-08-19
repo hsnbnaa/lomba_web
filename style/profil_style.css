@@ -222,7 +222,7 @@ ul {
 
 .notif{
   width: 360px;
-  height: 350px;
+  height: 380px;
   background-color: #3F54C4;
   margin: 20px;
   border-radius: 20px;
@@ -234,6 +234,19 @@ ul {
   padding-bottom: 0;
 }
 
+#semua{
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: white;
+  float: right;
+}
+
+.but{
+  background-color: #2ED0FF;
+  margin-right: 30px;
+}
+
 .petak12{
   width: 300px;
   height: 60px;
@@ -241,6 +254,20 @@ ul {
   margin-left: 35px;
   border-radius: 20px;
   background-color: #FE7373;
+}
+
+.petak12 img{
+  float: left;
+  margin: 15px;
+}
+
+.des{
+  justify-content: left;
+  align-items: center;
+}
+
+.des p{
+  font-size: 13px;
 }
 
 .petak13{
@@ -252,6 +279,11 @@ ul {
   background-color: #64DE2B;
 }
 
+.petak13 img{
+  float: left;
+  margin: 15px;
+}
+
 .petak14{
   width: 300px;
   height: 60px;
@@ -259,6 +291,11 @@ ul {
   margin-left: 35px;
   border-radius: 20px;
   background-color: #BED94F;
+}
+
+.petak14 img{
+  float: left;
+  margin: 15px;
 }
 
 .timeline{

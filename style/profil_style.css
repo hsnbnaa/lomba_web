@@ -121,12 +121,27 @@ ul {
 }
 
 .kotak{
-    background-color: #67B1E6;
-    width: 700px;
-    height: 100px;
-    border-radius: 20px;
-    align-items: center;
-    display: flex;
+  background-image: url('../img/Group 389.png');
+  width: 700px;
+  height: 100px;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+}
+
+.kotak21 h4 {
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.kotak22 h4{
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.kotak23 h4{
+  margin-top: 10px;
+  margin-left: 100px;
 }
 
 #isi{
@@ -152,6 +167,15 @@ ul {
     padding-left: 20px;
     margin-top: 15px;
     background-color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+#cari{
+  position: absolute;
+  top: 39.2%;
+  left: 49%;
+  transform: translate(-50%,-50%);
 }
 
 #jud{
@@ -168,6 +192,7 @@ ul {
     width: 400px;
     height: 150px;
     border-radius: 30px;
+    background-image: url("../img/Frame 3771.png");
     background-color: #2ED0FF;
     margin: 10px;
 }
@@ -383,3 +408,6 @@ ul {
   border: none;
 }
 
+.k{
+  background-image: url('');
+}

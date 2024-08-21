@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             <span>syarat dan ketentuan</span> <br />serta
             <span>Ketentuan yang berlaku</span> di Edu - Care.
           </p>
-          <button type="submit" id="signup-btn" onclick="handleSignup(event)">
+          <button type="submit" id="signup-btn" onclick="handleSignup()">
             Daftar
           </button>
           `;
-        } else if (event.target.value == "orangtua_wali") {
+        } else if (event.target.value == "orangtua") {
           statusCard.innerHTML = `
                     <input
                       type="text"
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             <span>syarat dan ketentuan</span> <br />serta
             <span>Ketentuan yang berlaku</span> di Edu - Care.
           </p>
-          <button type="submit" id="signup-btn" onclick="handleSignup(event)">
+          <button type="submit" id="signup-btn" onclick="handleSignup()">
             Daftar
           </button>
           `;
@@ -139,28 +139,75 @@ textInputs.forEach((input) => {
 });
 
 // Mengatur Signup
-function handleSignup(event) {
-  event.preventDefault();
-  let form = document.getElementById("signupForm");
+function handleSignup() {
+  document
+    .getElementById("signupForm")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-  if (form instanceof HTMLFormElement) {
-    let formData = new FormData(form);
+      const status = document.querySelector(
+        'input[name="status"]:checked'
+      ).value;
+      console.log(status);
+      const name = document.getElementById("fullName").value;
+      const numberPhone = document.getElementById("numberPhone").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      let token, namaAnak, sekolah, mapel;
 
-    fetch("backend/backend.php?action=signup", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        window.location.href = "home.html";
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  } else {
-    console.error("Elemen yang dipilih bukan tipe HTMLFormElement");
-  }
+      if (status === "siswa") {
+        token = document.getElementById("token").value;
+      } else if (status === "orangtua") {
+        namaAnak = document.getElementById("namaAnak").value;
+      } else if (status === "guru") {
+        mapel = document.getElementById("mapel").value;
+        sekolah = document.getElementById("sekolah").value;
+      }
+
+      let data = {
+        status,
+        name,
+        numberPhone,
+        email,
+        password,
+      };
+
+      // Menambahkan properti tambahan berdasarkan status
+      if (status === "siswa") {
+        data.token = token;
+      } else if (status === "orangtua") {
+        data.namaAnak = namaAnak;
+      } else if (status === "guru") {
+        data.mapel = mapel;
+        data.sekolah = sekolah;
+      }
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+          alert(result.message);
+          window.location.href = "../login.php";
+        } else {
+          alert(result.message);
+        }
+      } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+        alert("An error occurred. Please try again.");
+      }
+    });
 }
 
 // Mengurus Next Step
@@ -208,7 +255,7 @@ function showLastStep() {
                   <span>syarat dan ketentuan</span> <br />serta
                   <span>Ketentuan yang berlaku</span> di Edu - Care.
               </p>
-              <button type="submit" id="signup-btn">
+              <button type="submit" id="signup-btn" onclick="handleSignup()">
                   Daftar
               </button>
             </div>
@@ -216,70 +263,70 @@ function showLastStep() {
   `;
 }
 
-function loadProvinsi() {
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET", "../backend/getData.php?type=provinsi", true);
-  xhr.onload = function () {
-    if (this.status === 200) {
-      const options = JSON.parse(this.responseText);
-      let selectElement = document.getElementById("provinsi");
-      selectElement.innerHTML = '<option value="">Pilih Provinsi</option>';
-      options.forEach((option) => {
-        let opt = document.createElement("option");
-        opt.value = option.provinsi;
-        opt.innerHTML = option.provinsi;
-        selectElement.appendChild(opt);
-      });
+async function loadProvinsi() {
+  try {
+    const response = await fetch("http://127.0.0.1:8000/provinsi"); // Endpoint API untuk mendapatkan provinsi
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
-  };
-  xhr.send();
+    const options = await response.json();
+    let selectElement = document.getElementById("provinsi");
+    selectElement.innerHTML = '<option value="">Pilih Provinsi</option>';
+    options.forEach((option) => {
+      let opt = document.createElement("option");
+      opt.value = option.provinsi;
+      opt.innerHTML = option.provinsi;
+      selectElement.appendChild(opt);
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
-function loadKota() {
+// Fungsi untuk memuat kota berdasarkan provinsi yang dipilih
+async function loadKota() {
   const provinsi = document.getElementById("provinsi").value;
-  const xhr = new XMLHttpRequest();
-  xhr.open(
-    "GET",
-    `../backend/getData.php?type=kota&provinsi=${encodeURIComponent(provinsi)}`,
-    true
-  );
-  xhr.onload = function () {
-    if (this.status === 200) {
-      const options = JSON.parse(this.responseText);
-      let selectElement = document.getElementById("kota");
-      selectElement.innerHTML =
-        '<option value="">Pilih Kota/Kabupaten</option>';
-      options.forEach((option) => {
-        let opt = document.createElement("option");
-        opt.value = option.kota;
-        opt.innerHTML = option.kota;
-        selectElement.appendChild(opt);
-      });
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:8000/kota?provinsi=${encodeURIComponent(provinsi)}`
+    ); // Endpoint API untuk mendapatkan kota
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
-  };
-  xhr.send();
+    const options = await response.json();
+    let selectElement = document.getElementById("kota");
+    selectElement.innerHTML = '<option value="">Pilih Kota/Kabupaten</option>';
+    options.forEach((option) => {
+      let opt = document.createElement("option");
+      opt.value = option.kota;
+      opt.innerHTML = option.kota;
+      selectElement.appendChild(opt);
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
-function loadSekolah() {
+// Fungsi untuk memuat sekolah berdasarkan kota yang dipilih
+async function loadSekolah() {
   const kota = document.getElementById("kota").value;
-  const xhr = new XMLHttpRequest();
-  xhr.open(
-    "GET",
-    `../backend/getData.php?type=sekolah&kota=${encodeURIComponent(kota)}`,
-    true
-  );
-  xhr.onload = function () {
-    if (this.status === 200) {
-      const options = JSON.parse(this.responseText);
-      let selectElement = document.getElementById("sekolah");
-      selectElement.innerHTML = '<option value="">Pilih Sekolah</option>';
-      options.forEach((option) => {
-        let opt = document.createElement("option");
-        opt.value = option.sekolah;
-        opt.innerHTML = option.sekolah;
-        selectElement.appendChild(opt);
-      });
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:8000/sekolah?kota=${encodeURIComponent(kota)}`
+    ); // Endpoint API untuk mendapatkan sekolah
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
-  };
-  xhr.send();
+    const options = await response.json();
+    let selectElement = document.getElementById("sekolah");
+    selectElement.innerHTML = '<option value="">Pilih Sekolah</option>';
+    options.forEach((option) => {
+      let opt = document.createElement("option");
+      opt.value = option.sekolah;
+      opt.innerHTML = option.sekolah;
+      selectElement.appendChild(opt);
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }

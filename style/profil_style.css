@@ -129,19 +129,37 @@ ul {
   display: flex;
 }
 
+.kotak button{
+ cursor: pointer;
+}
+
 .kotak21 h4 {
   margin-top: 10px;
   margin-left: 100px;
 }
 
 .kotak22 h4{
+  margin-left: 90px;
   margin-top: 10px;
-  margin-left: 100px;
 }
 
 .kotak23 h4{
-  margin-top: 10px;
   margin-left: 100px;
+  margin-top: 10px;
+}
+
+.kotak31 h4{
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.kotak32 h4{
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.kotak33 h4{
+  margin-left: 100px;
+  margin-top: 10px;
 }
 
 #isi{
@@ -189,52 +207,77 @@ ul {
 }
 
 .kotak21{
-    width: 400px;
-    height: 150px;
+    width: 390px;
+    height: 168px;
     border-radius: 30px;
-    background-image: url("../img/Frame 3771.png");
     background-color: #2ED0FF;
     margin: 10px;
+    margin-left: 0;
+    padding: 0;
+    background-image: url("../img/Frame 3775.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
 }
 
 .kotak22{
-  width: 400px;
-  height: 150px;
+  width: 390px;
+  height: 168px;
   border-radius: 30px;
   background-color: #C261FE;
   margin: 10px;
+  background-image: url("../img/Frame 3777.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
 }
 
 .kotak23{
-  width: 400px;
-  height: 150px;
+  width: 390px;
+  height: 168px;
   border-radius: 30px;
   background-color: rgb(0, 162, 221);
   margin: 10px;
+  margin-left: 0;
+  cursor: pointer;
 }
 
 .kotak31{
-  width: 250px;
-  height: 150px;
+  width: 280px;
+  height: 168px;
   border-radius: 30px;
   background-color: #FFCD4B;
-  margin: 10px; 
+  margin: 10px;
+  background-image: url("../img/Frame 3779.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
 }
 
 .kotak32{
-  width: 250px;
-  height: 150px;
+  width: 280px;
+  height: 168px;
   border-radius: 30px;
   background-color: #50FF76;
-  margin: 10px; 
+  margin: 10px;
+  margin-left: 0;
+  background-image: url("../img/Frame 3780.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
 }
 
 .kotak33{
-  width: 250px;
-  height: 150px;
+  width: 280px;
+  height: 168px;
   border-radius: 30px;
   background-color: #70d3e9;
   margin: 10px; 
+  cursor: pointer;
 }
 
 .susun{
@@ -251,6 +294,10 @@ ul {
   background-color: #3F54C4;
   margin: 20px;
   border-radius: 20px;
+}
+
+.notif button{
+  cursor: pointer;
 }
 
 .notif h1{
@@ -366,6 +413,10 @@ ul {
   background-color: #3F54C4;
   margin: 20px;
   border-radius: 20px;
+}
+
+.timeline button{
+  cursor: pointer;
 }
 
 .timeline h1{

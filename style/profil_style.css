@@ -187,19 +187,22 @@ ul {
     padding: 0;
     cursor: pointer;
     align-content: center;
-}
-
-.kotak21 h4{
-  margin-left: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .sub{
   display: flex;
-  background-color: #d2ff2e;
+  margin-bottom: 10px;
 }
 
 .sub img{
   margin-left: 120px;
+}
+
+.gambar{
+  margin-left: 20px;
 }
 
 .kelas{
@@ -212,7 +215,6 @@ ul {
   justify-content: center;
   width: fit-content;
   padding: 10px;
-  margin-left: 40px;
 }
 
 .kelas h4{

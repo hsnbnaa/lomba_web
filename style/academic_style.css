@@ -24,7 +24,7 @@ ul {
   display: flex;
   flex-direction: column;
   margin: 18px 0 30px 17px;
-  height: 100vh;
+  height: 96vh;
   width: 358px;
   background: linear-gradient(315deg, #70d3e9, #5794d6, #3f54c4);
   border-radius: 20px;

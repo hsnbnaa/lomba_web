@@ -9,7 +9,7 @@ app = FastAPI()
 
 # Konfigurasi CORS
 orig_origins = [
-    "http://localhost:3000",  # Ganti dengan asal yang sesuai
+    "http://127.0.0.1:5500",  # Ganti dengan asal yang sesuai
 ]
 
 app.add_middleware(
@@ -231,6 +231,7 @@ async def get_mapel(user_name: str):
 class Token(BaseModel):
     kelas: str
     semester: int
+    jumlah_mapel: int
     
 @app.get('/token/{token_code}', response_model=List[Token])
 async def get_token(token_code: str):

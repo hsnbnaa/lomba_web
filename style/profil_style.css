@@ -198,7 +198,7 @@ ul {
 }
 
 .sub img{
-  margin-left: 120px;
+  margin-left: auto;
 }
 
 .gambar{
@@ -227,7 +227,13 @@ ul {
   border-radius: 30px;
   background-color: #C261FE;
   margin: 10px;
+  margin-left: 0;
+  padding: 0;
   cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .kotak23{
@@ -237,7 +243,57 @@ ul {
   background-color: #FF5A5A;
   margin: 10px;
   margin-left: 0;
+  padding: 0;
   cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.kotak24{
+  width: 390px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #97C7FF;
+  margin: 10px;
+  margin-left: 0;
+  padding: 0;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.kotak25{
+  width: 390px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #FFBA35;
+  margin: 10px;
+  margin-left: 0;
+  padding: 0;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.kotak26{
+  width: 390px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #fa69ff;
+  margin: 10px;
+  margin-left: 0;
+  padding: 0;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .kotak31{

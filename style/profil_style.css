@@ -122,7 +122,7 @@ ul {
 
 .kotak{
   background-image: url('../img/Group 389.png');
-  width: 700px;
+  width: 742px;
   height: 100px;
   border-radius: 20px;
   align-items: center;
@@ -139,7 +139,8 @@ ul {
 }
 
 #tombol{
-    margin-left: 240px;
+    margin-left: auto;
+    margin-right: 20px;
     padding: 0;
     width: 100px;
     height: 30px;
@@ -174,22 +175,20 @@ ul {
 .bungkus{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-top: 10px;
 }
 
 .kotak21{
-    width: 390px;
+    width: 420px;
     height: 168px;
     border-radius: 30px;
     background-color: #2ED0FF;
-    margin: 10px;
-    margin-left: 0;
-    padding: 0;
     cursor: pointer;
     align-content: center;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-right: 20px;
 }
 
 .sub{
@@ -222,106 +221,150 @@ ul {
 }
 
 .kotak22{
-  width: 390px;
+  width: 420px;
   height: 168px;
   border-radius: 30px;
   background-color: #C261FE;
-  margin: 10px;
-  margin-left: 0;
-  padding: 0;
   cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top: 20px;
 }
 
 .kotak23{
-  width: 390px;
+  width: 420px;
   height: 168px;
   border-radius: 30px;
   background-color: #FF5A5A;
-  margin: 10px;
-  margin-left: 0;
-  padding: 0;
   cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .kotak24{
-  width: 390px;
+  width: 420px;
   height: 168px;
   border-radius: 30px;
   background-color: #97C7FF;
-  margin: 10px;
-  margin-left: 0;
-  padding: 0;
-  cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top: 20px;
 }
 
 .kotak25{
-  width: 390px;
+  width: 420px;
   height: 168px;
   border-radius: 30px;
   background-color: #FFBA35;
-  margin: 10px;
-  margin-left: 0;
-  padding: 0;
-  cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .kotak26{
-  width: 390px;
+  width: 420px;
   height: 168px;
   border-radius: 30px;
   background-color: #fa69ff;
-  margin: 10px;
-  margin-left: 0;
-  padding: 0;
-  cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top: 20px;
 }
 
 .kotak31{
-  width: 280px;
+  width: 300px;
   height: 168px;
   border-radius: 30px;
   background-color: #FFCD4B;
-  margin: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gambar1 img{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.konten{
+  margin-right: 5px;
 }
 
 .kotak32{
-  width: 280px;
+  width: 300px;
   height: 168px;
   border-radius: 30px;
   background-color: #50FF76;
-  margin: 10px;
-  margin-left: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .kotak33{
-  width: 280px;
+  width: 300px;
   height: 168px;
   border-radius: 30px;
-  background-color: #70d3e9;
-  margin: 10px; 
+  background-color: #FF9356;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.kotak34{
+  width: 300px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #8BEDE7;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.kotak35{
+  width: 300px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #FF65DD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.kotak36{
+  width: 300px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #1AE4FF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .susun{
@@ -333,10 +376,11 @@ ul {
 }
 
 .notif{
-  width: 360px;
+  width: 320px;
   height: 380px;
   background-color: #3F54C4;
   margin: 20px;
+  margin-left: auto;
   border-radius: 20px;
 }
 
@@ -346,7 +390,7 @@ ul {
 
 .notif h1{
   color: white;
-  padding: 40px;
+  padding: 20px;
   padding-bottom: 0;
 }
 
@@ -365,15 +409,24 @@ ul {
 }
 
 .petak12{
-  width: 300px;
-  height: 60px;
+  width: 280px;
+  height: fit-content;
   margin: 20px;
-  margin-left: 30px;
   border-radius: 20px;
   background-color: #FE7373;
   align-items: center;
   display: flex;
   color: white;
+}
+
+#waktu{
+  color: white;
+  font-size: 10px;
+}
+
+.sampul{
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .petak12 img{
@@ -391,25 +444,10 @@ ul {
   font-size: 13px;
 }
 
-.waktu{
-  font-size: 10px;
-  display: flex;
-  align-items: end;
-  position: absolute;
-  color: #FFFFFF;
-}
-
-.petak12 .waktu{
-  top: 22%;
-  right: 2.5%;
-  transform: translate(-50%,-50%);
-}
-
 .petak13{
-  width: 300px;
-  height: 60px;
+  width: 280px;
+  height: auto;
   margin: 20px;
-  margin-left: 30px;
   border-radius: 20px;
   background-color: #64DE2B;
   align-items: center;
@@ -422,17 +460,10 @@ ul {
   margin: 15px;
 }
 
-.petak13 .waktu{
-  top: 33%;
-  right: 2.5%;
-  transform: translate(-50%,-50%);
-}
-
 .petak14{
-  width: 300px;
-  height: 60px;
+  width: 280px;
+  height: auto;
   margin: 20px;
-  margin-left: 30px;
   border-radius: 20px;
   background-color: #BED94F;
   align-items: center;
@@ -445,17 +476,10 @@ ul {
   margin: 15px;
 }
 
-.petak14 .waktu{
-  top: 44%;
-  right: 2.5%;
-  transform: translate(-50%,-50%);
-}
-
 .timeline{
-  width: 360px;
+  width: 330px;
   height: 350px;
   background-color: #3F54C4;
-  margin: 20px;
   border-radius: 20px;
 }
 
@@ -465,7 +489,7 @@ ul {
 
 .timeline h1{
   color: white;
-  padding: 40px;
+  padding: 20px;
   padding-bottom: 0;
 }
 
@@ -481,17 +505,19 @@ ul {
 
 .ton{
   display: flex;
-  width: 300px;
+  width: 280px;
   height: 100px;
-  margin: 20px;
-  margin-left: 35px;
   border-radius: 20px;
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 .kerja{
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .kerja button{

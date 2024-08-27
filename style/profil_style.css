@@ -191,6 +191,60 @@ ul {
   justify-content: center;
   display: flex;
   margin-right: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.kotak21::after{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2ed0ff;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+.kotak21::before{
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 30px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.kotak21:hover::before {
+  opacity: 1;
+}
+
+.kotak21:active:after {
+  background: transparent;
+}
+
+.kotak21:active {
+  color: #000;
+  font-weight: bold;
 }
 
 .sub {
@@ -254,6 +308,7 @@ ul {
   height: 168px;
   border-radius: 30px;
   background-color: #97c7ff;
+  cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -266,6 +321,7 @@ ul {
   height: 168px;
   border-radius: 30px;
   background-color: #ffba35;
+  cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -279,6 +335,7 @@ ul {
   height: 168px;
   border-radius: 30px;
   background-color: #fa69ff;
+  cursor: pointer;
   align-content: center;
   align-items: center;
   justify-content: center;

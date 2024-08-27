@@ -5,7 +5,6 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
   display: flex;
-  flex-direction: row;
   background-color: #dfeeff;
 }
 
@@ -24,8 +23,11 @@ ul {
   display: flex;
   flex-direction: column;
   margin: 18px 0 30px 17px;
-  height: 100vh;
+  height: 96vh;
   width: 358px;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: linear-gradient(315deg, #70d3e9, #5794d6, #3f54c4);
   border-radius: 20px;
   align-items: center;
@@ -120,8 +122,8 @@ ul {
   margin-bottom: 20px;
 }
 
-.kotak{
-  background-image: url('../img/Group 389.png');
+.kotak {
+  background-image: url("../img/Group 389.png");
   width: 742px;
   height: 100px;
   border-radius: 20px;
@@ -129,82 +131,82 @@ ul {
   display: flex;
 }
 
-.kotak button{
- cursor: pointer;
+.kotak button {
+  cursor: pointer;
 }
 
-#isi{
-    margin-left: 20px;
-    color: white;
+#isi {
+  margin-left: 20px;
+  color: white;
 }
 
-#tombol{
-    margin-left: auto;
-    margin-right: 20px;
-    padding: 0;
-    width: 100px;
-    height: 30px;
-    border: 0;
-    border-radius: 10px;
-    background-color: white
+#tombol {
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 0;
+  width: 100px;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: white;
 }
 
-.search{
-    width: 370px;
-    height: 50px;
-    border-radius: 20px;
-    border: 0;
-    padding-left: 20px;
-    margin-top: 15px;
-    background-color: white;
-    outline: none;
-    font-size: 15px;
+.search {
+  width: 370px;
+  height: 50px;
+  border-radius: 20px;
+  border: 0;
+  padding-left: 20px;
+  margin-top: 15px;
+  background-color: white;
+  outline: none;
+  font-size: 15px;
 }
 
-#cari{
+#cari {
   position: absolute;
   top: 39.2%;
   left: 49%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-#jud{
-    margin-top: 15px;
+#jud {
+  margin-top: 15px;
 }
 
-.bungkus{
+.bungkus {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
 }
 
-.kotak21{
-    width: 420px;
-    height: 168px;
-    border-radius: 30px;
-    background-color: #2ED0FF;
-    cursor: pointer;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-right: 20px;
+.kotak21 {
+  width: 420px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #2ed0ff;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-right: 20px;
 }
 
-.sub{
+.sub {
   display: flex;
   margin-bottom: 10px;
 }
 
-.sub img{
+.sub img {
   margin-left: auto;
 }
 
-.gambar{
+.gambar {
   margin-left: 20px;
 }
 
-.kelas{
+.kelas {
   background-color: white;
   border-radius: 20px;
   height: 15px;
@@ -216,15 +218,15 @@ ul {
   padding: 10px;
 }
 
-.kelas h4{
+.kelas h4 {
   margin: 10px;
 }
 
-.kotak22{
+.kotak22 {
   width: 420px;
   height: 168px;
   border-radius: 30px;
-  background-color: #C261FE;
+  background-color: #c261fe;
   cursor: pointer;
   align-content: center;
   align-items: center;
@@ -233,11 +235,11 @@ ul {
   margin-top: 20px;
 }
 
-.kotak23{
+.kotak23 {
   width: 420px;
   height: 168px;
   border-radius: 30px;
-  background-color: #FF5A5A;
+  background-color: #ff5a5a;
   cursor: pointer;
   align-content: center;
   align-items: center;
@@ -247,11 +249,11 @@ ul {
   margin-top: 20px;
 }
 
-.kotak24{
+.kotak24 {
   width: 420px;
   height: 168px;
   border-radius: 30px;
-  background-color: #97C7FF;
+  background-color: #97c7ff;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -259,11 +261,11 @@ ul {
   margin-top: 20px;
 }
 
-.kotak25{
+.kotak25 {
   width: 420px;
   height: 168px;
   border-radius: 30px;
-  background-color: #FFBA35;
+  background-color: #ffba35;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -272,7 +274,7 @@ ul {
   margin-top: 20px;
 }
 
-.kotak26{
+.kotak26 {
   width: 420px;
   height: 168px;
   border-radius: 30px;
@@ -284,31 +286,31 @@ ul {
   margin-top: 20px;
 }
 
-.kotak31{
+.kotak31 {
   width: 300px;
   height: 168px;
   border-radius: 30px;
-  background-color: #FFCD4B;
+  background-color: #ffcd4b;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.gambar1 img{
+.gambar1 img {
   margin-right: 5px;
   margin-left: 5px;
 }
 
-.konten{
+.konten {
   margin-right: 5px;
 }
 
-.kotak32{
+.kotak32 {
   width: 300px;
   height: 168px;
   border-radius: 30px;
-  background-color: #50FF76;
+  background-color: #50ff76;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -317,11 +319,11 @@ ul {
   margin-top: 20px;
 }
 
-.kotak33{
+.kotak33 {
   width: 300px;
   height: 168px;
   border-radius: 30px;
-  background-color: #FF9356;
+  background-color: #ff9356;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -329,36 +331,11 @@ ul {
   margin-top: 20px;
 }
 
-.kotak34{
+.kotak34 {
   width: 300px;
   height: 168px;
   border-radius: 30px;
-  background-color: #8BEDE7;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-.kotak35{
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #FF65DD;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.kotak36{
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #1AE4FF;
+  background-color: #8bede7;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -367,34 +344,64 @@ ul {
   margin-top: 20px;
 }
 
-.susun{
+.kotak35 {
+  width: 300px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #ff65dd;
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.kanan{
+.kotak36 {
+  width: 300px;
+  height: 168px;
+  border-radius: 30px;
+  background-color: #1ae4ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.susun {
+  display: flex;
+  margin: 0 0px 0 370px;
+  width: 100px;
+}
+
+.kanan {
+  position: fixed;
+  top: 0;
+  right: 0;
   margin-left: 15px;
 }
 
-.notif{
+.notif {
   width: 320px;
   height: 380px;
-  background-color: #3F54C4;
+  background-color: #3f54c4;
   margin: 20px;
   margin-left: auto;
   border-radius: 20px;
 }
 
-.notif button{
+.notif button {
   cursor: pointer;
 }
 
-.notif h1{
+.notif h1 {
   color: white;
   padding: 20px;
   padding-bottom: 0;
 }
 
-#semua{
+#semua {
   width: 120px;
   height: 30px;
   border-radius: 20px;
@@ -403,107 +410,107 @@ ul {
   border: none;
 }
 
-.but{
-  background-color: #2ED0FF;
+.but {
+  background-color: #2ed0ff;
   margin-right: 30px;
 }
 
-.petak12{
+.petak12 {
   width: 280px;
   height: fit-content;
   margin: 20px;
   border-radius: 20px;
-  background-color: #FE7373;
+  background-color: #fe7373;
   align-items: center;
   display: flex;
   color: white;
 }
 
-#waktu{
+#waktu {
   color: white;
   font-size: 10px;
 }
 
-.sampul{
+.sampul {
   margin-top: 3px;
   margin-bottom: 3px;
 }
 
-.petak12 img{
+.petak12 img {
   float: left;
   margin: 15px;
 }
 
-.des{
+.des {
   margin: 0;
   padding: 0;
   text-align: left;
 }
 
-.des p{
+.des p {
   font-size: 13px;
 }
 
-.petak13{
+.petak13 {
   width: 280px;
   height: auto;
   margin: 20px;
   border-radius: 20px;
-  background-color: #64DE2B;
+  background-color: #64de2b;
   align-items: center;
   display: flex;
   color: white;
 }
 
-.petak13 img{
+.petak13 img {
   float: left;
   margin: 15px;
 }
 
-.petak14{
+.petak14 {
   width: 280px;
   height: auto;
   margin: 20px;
   border-radius: 20px;
-  background-color: #BED94F;
+  background-color: #bed94f;
   align-items: center;
   display: flex;
   color: white;
 }
 
-.petak14 img{
+.petak14 img {
   float: left;
   margin: 15px;
 }
 
-.timeline{
+.timeline {
   width: 330px;
-  height: 350px;
-  background-color: #3F54C4;
+  height: 300px;
+  background-color: #3f54c4;
   border-radius: 20px;
 }
 
-.timeline button{
+.timeline button {
   cursor: pointer;
 }
 
-.timeline h1{
+.timeline h1 {
   color: white;
   padding: 20px;
   padding-bottom: 0;
 }
 
-.petak2{
+.petak2 {
   font-size: 13px;
   align-content: center;
   padding-left: 15px;
 }
 
-#bio{
+#bio {
   color: #6c6a6a;
 }
 
-.ton{
+.ton {
   display: flex;
   width: 280px;
   height: 100px;
@@ -514,13 +521,13 @@ ul {
   margin-top: 10px;
 }
 
-.kerja{
+.kerja {
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
 
-.kerja button{
+.kerja button {
   border-radius: 30px;
   width: 100px;
   height: 35px;
@@ -529,6 +536,6 @@ ul {
   border: none;
 }
 
-.k{
-  background-image: url('');
+.k {
+  background-image: url("");
 }

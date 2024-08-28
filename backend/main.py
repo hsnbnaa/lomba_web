@@ -198,21 +198,16 @@ async def get_sekolah(kota: str):
         raise HTTPException(status_code=500, detail=str(err))
     
 class Mapel(BaseModel):
-    mapel_1: str
-    mapel_2: str
-    mapel_3: str
-    mapel_4: str
-    mapel_5: str
-    mapel_6: str
-    mapel_7: str
-    mapel_8: str
+    mapel: str
+    warna: str
+    url_gambar: str
 
-@app.get("/mapel/{user_name}", response_model=List[Mapel])
-async def get_mapel(user_name: str):
+@app.get("/mapel", response_model=List[Mapel])
+async def get_mapel():
     try:
         db = get_db_connection()
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM mapel where fullname = %s", (user_name,))
+        cursor.execute("SELECT * FROM mapel")
         
         # Mengambil nama kolom
         columns = [column[0] for column in cursor.description]
@@ -306,6 +301,8 @@ async def get_nilai(user_name: str):
 
     except mysql.connector.Error as err:
         raise HTTPException(status_code=500, detail=str(err))
+    
+
 
 if __name__ == "__main__":
     import uvicorn

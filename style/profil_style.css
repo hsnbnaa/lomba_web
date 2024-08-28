@@ -152,7 +152,7 @@ ul {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#tombol:hover{
+#tombol:hover {
   transform: scale(1.1);
   background-color: rgb(0, 110, 255);
   color: white;
@@ -185,6 +185,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
+  gap: 20px;
 }
 
 .kotak21 {
@@ -197,13 +198,12 @@ ul {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-right: 20px;
   position: relative;
   z-index: 0;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.kotak21:hover{
+.kotak21:hover {
   transform: scale(1.07);
 }
 
@@ -236,98 +236,6 @@ ul {
   margin: 10px;
 }
 
-.kotak22 {
-  width: 420px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #c261fe;
-  cursor: pointer;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak22:hover{
-  transform: scale(1.07);
-}
-
-.kotak23 {
-  width: 420px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #ff5a5a;
-  cursor: pointer;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-right: 20px;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak23:hover{
-  transform: scale(1.07);
-}
-
-.kotak24 {
-  width: 420px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #97c7ff;
-  cursor: pointer;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak24:hover{
-  transform: scale(1.07);
-}
-
-.kotak25 {
-  width: 420px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #ffba35;
-  cursor: pointer;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-right: 20px;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease; 
-}
-
-.kotak25:hover{
-  transform: scale(1.07);
-}
-
-.kotak26 {
-  width: 420px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #fa69ff;
-  cursor: pointer;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak26:hover{
-  transform: scale(1.07);
-}
-
 .kotak31 {
   width: 300px;
   height: 168px;
@@ -340,7 +248,7 @@ ul {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.kotak31:hover{
+.kotak31:hover {
   transform: scale(1.07);
 }
 
@@ -351,94 +259,6 @@ ul {
 
 .konten {
   margin-right: 5px;
-}
-
-.kotak32 {
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #50ff76;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak32:hover{
-  transform: scale(1.07);
-}
-
-.kotak33 {
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #ff9356;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak33:hover{
-  transform: scale(1.07);
-}
-
-.kotak34 {
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #8bede7;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak34:hover{
-  transform: scale(1.07);
-}
-
-.kotak35 {
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #ff65dd;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak35:hover{
-  transform: scale(1.07);
-}
-
-.kotak36 {
-  width: 300px;
-  height: 168px;
-  border-radius: 30px;
-  background-color: #1ae4ff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  margin-top: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.kotak36:hover{
-  transform: scale(1.07);
 }
 
 .susun {
@@ -482,7 +302,7 @@ ul {
   border: none;
 }
 
-#semua:hover{
+#semua:hover {
   background-color: rgb(130, 130, 130);
   color: white;
 }
@@ -614,7 +434,7 @@ ul {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.kerja button:hover{
+.kerja button:hover {
   transform: scale(1.07);
 }
 

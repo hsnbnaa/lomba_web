@@ -149,6 +149,13 @@ ul {
   border: 0;
   border-radius: 10px;
   background-color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#tombol:hover{
+  transform: scale(1.1);
+  background-color: rgb(0, 110, 255);
+  color: white;
 }
 
 .search {
@@ -475,6 +482,11 @@ ul {
   border: none;
 }
 
+#semua:hover{
+  background-color: rgb(130, 130, 130);
+  color: white;
+}
+
 .but {
   background-color: #2ed0ff;
   margin-right: 30px;
@@ -599,6 +611,11 @@ ul {
   background-color: red;
   color: white;
   border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kerja button:hover{
+  transform: scale(1.07);
 }
 
 .k {

@@ -193,58 +193,11 @@ ul {
   margin-right: 20px;
   position: relative;
   z-index: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.kotak21::after{
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #2ed0ff;
-  left: 0;
-  top: 0;
-  border-radius: 30px;
-}
-
-.kotak21::before{
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #FF0000, #FF7300, #FFFB00, #48FF00,
-    #00FFD5, #002BFF, #FF00C8, #FF0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 600%;
-  z-index: -1;
-  width: calc(100% + 4px);
-  height:  calc(100% + 4px);
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 30px;
-  opacity: 0;
-}
-
-@keyframes glowing {
-  0% {background-position: 0 0;}
-  50% {background-position: 400% 0;}
-  100% {background-position: 0 0;}
-}
-
-.kotak21:hover::before {
-  opacity: 1;
-}
-
-.kotak21:active:after {
-  background: transparent;
-}
-
-.kotak21:active {
-  color: #000;
-  font-weight: bold;
+.kotak21:hover{
+  transform: scale(1.07);
 }
 
 .sub {
@@ -287,6 +240,11 @@ ul {
   justify-content: center;
   display: flex;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak22:hover{
+  transform: scale(1.07);
 }
 
 .kotak23 {
@@ -301,6 +259,11 @@ ul {
   display: flex;
   margin-right: 20px;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak23:hover{
+  transform: scale(1.07);
 }
 
 .kotak24 {
@@ -314,6 +277,11 @@ ul {
   justify-content: center;
   display: flex;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak24:hover{
+  transform: scale(1.07);
 }
 
 .kotak25 {
@@ -328,6 +296,11 @@ ul {
   display: flex;
   margin-right: 20px;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.kotak25:hover{
+  transform: scale(1.07);
 }
 
 .kotak26 {
@@ -341,6 +314,11 @@ ul {
   justify-content: center;
   display: flex;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak26:hover{
+  transform: scale(1.07);
 }
 
 .kotak31 {
@@ -352,6 +330,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak31:hover{
+  transform: scale(1.07);
 }
 
 .gambar1 img {
@@ -374,6 +357,11 @@ ul {
   justify-content: center;
   margin-right: 20px;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak32:hover{
+  transform: scale(1.07);
 }
 
 .kotak33 {
@@ -386,6 +374,11 @@ ul {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak33:hover{
+  transform: scale(1.07);
 }
 
 .kotak34 {
@@ -399,6 +392,11 @@ ul {
   justify-content: center;
   margin-right: 20px;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak34:hover{
+  transform: scale(1.07);
 }
 
 .kotak35 {
@@ -411,6 +409,11 @@ ul {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak35:hover{
+  transform: scale(1.07);
 }
 
 .kotak36 {
@@ -424,6 +427,11 @@ ul {
   justify-content: center;
   margin-right: 20px;
   margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kotak36:hover{
+  transform: scale(1.07);
 }
 
 .susun {

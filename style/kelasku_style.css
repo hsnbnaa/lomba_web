@@ -143,23 +143,31 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 1010px;
+  width: 1040px;
   margin-bottom: 47px;
+}
+
+.materi-container {
+  display: flex;
+  gap: 20px;
 }
 
 .materi-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  transition: width 0.5s ease;
 }
 
 .materi-content .label {
   display: flex;
   justify-content: space-between;
   padding: 19px 23px;
-  background-color: #c2f6ff;
+  background-color: white;
   border-radius: 20px;
   align-items: center;
-  transition: border-radius 0.5s ease;
+  transition: border-radius 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .materi-content .label h5 {
@@ -182,16 +190,140 @@ ul {
   transition: max-height 0.5s ease;
 }
 
-.materi-content.active .content {
-  display: block;
+.content-list {
+  counter-reset: list-counter;
+  position: relative;
+}
+
+.content-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  counter-increment: list-counter;
+  list-style: none;
+  margin-left: 13px;
+}
+
+.content-list li::before {
+  content: "0" counter(list-counter);
+  position: absolute;
+  left: 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.content-list li .content-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 23px;
+}
+
+.content-line input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.content-list li h6 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content-list hr {
+  position: relative;
+  width: calc(100% + 40px);
+  left: -40px;
+  border: 1px solid grey;
+  margin: 15px 0;
+}
+
+.content-list li h6:hover {
+  text-decoration: underline;
+}
+
+.content-list li h6 img {
+  margin-right: 8px;
+}
+
+.materi-container.active .content {
   max-height: 500px;
 }
 
-.materi-content.active .label {
+.materi-container.active .label {
+  background-color: #c2f6ff;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.materi-content.active .label img {
+.materi-container.active .label img {
   transform: rotate(180deg);
+}
+
+/* Video Content */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  margin-right: 30px;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, max-width 0.5s ease, padding 0.5s ease;
+}
+
+.video-container.active {
+  max-width: 35%;
+  padding: 25px 45px;
+  max-height: 390px;
+}
+
+.video-container.active a {
+  margin-top: 20px;
+}
+
+.video-container img {
+  width: 350px;
+  height: 201px;
+}
+
+.video-container p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.video-container .nama-guru {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nama-guru img {
+  width: 20px;
+  height: 20px;
+}
+
+.video-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 80px;
+  border-radius: 20px;
+  background-color: #c2f6ff;
+}
+
+.video-container a img {
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
 }

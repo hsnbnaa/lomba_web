@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Edu-Care</title>
+    <link rel="icon" href="img/logo-icon.png" />
+    <link rel="stylesheet" href="style/kelasku_style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <main class="sidebar-main">
+        <div class="logo">
+          <img src="img/logo-icon.png" alt="Logo Website" />
+          <h1>EDU -<br />CARE</h1>
+        </div>
+        <div class="profile">
+          <img src="img/profile-icon.png" alt="Icon Profile" />
+          <h3 id="username">Ahmad Fauzi</h3>
+          <h5 id="email">fauzi.fuzzy@gmail.com</h5>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="#"><img src="img/kelas-icon.png" alt="" />KelasKu</a>
+            </li>
+            <li>
+              <a href="#"><img src="img/nilaiku-icon.png" alt="" />NilaiKu</a>
+            </li>
+            <li>
+              <a href="#"><img src="img/chat-icon.png" alt="" />Chat</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/liveclass-icon.png" alt="" />Live Class</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/pengaturan-icon.png" alt="" />Pengaturan</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </main>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <h2>FISIKA</h2>
+        <h2>X MIPA 1</h2>
+        <h4>Kelas Arif Widianto</h4>
+      </header>
+      <section class="materi-accordion">
+        <article class="materi-content" id="materi-content">
+          <div class="label">
+            <h5>Bab 1 : Besaran & Satuan</h5>
+            <img src="img/arrow-accordion.png" alt="Accordion" />
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo possimus quia consectetur esse minus quos eos mollitia,
+              vero ullam corrupti, in, eius accusantium. Consequatur tempora
+              harum saepe eveniet quas illum!
+            </p>
+          </div>
+        </article>
+        <article class="materi-content" id="materi-content">
+          <div class="label">
+            <h5>Bab 1 : Besaran & Satuan</h5>
+            <img src="img/arrow-accordion.png" alt="Accordion" />
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo possimus quia consectetur esse minus quos eos mollitia,
+              vero ullam corrupti, in, eius accusantium. Consequatur tempora
+              harum saepe eveniet quas illum!
+            </p>
+          </div>
+        </article>
+        <article class="materi-content" id="materi-content">
+          <div class="label">
+            <h5>Bab 1 : Besaran & Satuan</h5>
+            <img src="img/arrow-accordion.png" alt="Accordion" />
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo possimus quia consectetur esse minus quos eos mollitia,
+              vero ullam corrupti, in, eius accusantium. Consequatur tempora
+              harum saepe eveniet quas illum!
+            </p>
+          </div>
+        </article>
+        <article class="materi-content" id="materi-content">
+          <div class="label">
+            <h5>Bab 1 : Besaran & Satuan</h5>
+            <img src="img/arrow-accordion.png" alt="Accordion" />
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo possimus quia consectetur esse minus quos eos mollitia,
+              vero ullam corrupti, in, eius accusantium. Consequatur tempora
+              harum saepe eveniet quas illum!
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const accordion = document.querySelectorAll("#materi-content");
+
+      accordion.forEach((accordion) => {
+        accordion.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -110,7 +110,7 @@ ul {
 .main-content {
   display: flex;
   flex-direction: column;
-  margin: 39px 30px 0 410px;
+  margin: 39px 0px 0 410px;
 }
 /* 35px */
 
@@ -149,7 +149,8 @@ ul {
 
 .materi-container {
   display: flex;
-  gap: 20px;
+  gap: 0;
+  transition: gap 0.5s ease;
 }
 
 .materi-content {
@@ -250,7 +251,7 @@ ul {
 }
 
 .materi-container.active .content {
-  max-height: 500px;
+  max-height: 900px;
 }
 
 .materi-container.active .label {
@@ -291,6 +292,7 @@ ul {
 .video-container img {
   width: 350px;
   height: 201px;
+  border-radius: 20px;
 }
 
 .video-container p {

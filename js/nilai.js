@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const username = localStorage.getItem("username");
+
   fetch(
     `https://backendlomba-production.up.railway.app/get_nilai/${username}`
   ).then((response) => {

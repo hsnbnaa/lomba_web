@@ -202,7 +202,7 @@ function handleSignup() {
 
         if (result.status === "success") {
           alert(result.message);
-          window.location.href = "../login.php";
+          window.location.href = "login.html";
         } else {
           alert(result.message);
         }

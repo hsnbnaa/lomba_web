@@ -830,10 +830,10 @@ body {
   }
   .hero-right img {
     width: 700px;
-    margin-top: 130px;
+    margin-top: 7ch;
   }
   .hero-left {
-    margin-top: 130px;
+    margin-top: 70px;
     font-size: 120%;
   }
 

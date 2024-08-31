@@ -797,7 +797,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) and (min-width : 700px){
   .logo-icon{
     margin-top: 80px;
   }
@@ -810,11 +810,7 @@ body {
     font-size: 28px;
   }
   .hero{
-    width: 140%;
     height: 735px;
-  }
-  .navbar{
-    width: 127%;
   }
   .navbar-nav{
     margin-top: 80px;
@@ -823,19 +819,106 @@ body {
     font-size: 18px;
   }
   .navbar-nav .nav-link{
-    background-size: 145px 70px;
     background-repeat: no-repeat;
     padding: 20px 35px;
     font-weight: 700;
   }
   .hero-right img {
     width: 700px;
-    margin-top: 7ch;
+    margin-top: 70px;
   }
   .hero-left {
     margin-top: 70px;
     font-size: 120%;
   }
+  .typewriter .line1,.line2{
+    font-size: 140%;
+  }
+  body{
+    background-repeat: no-repeat;
+    display: grid;
+    background-size: 1500px;
+  }
+  .why-section{
+    justify-items: center;
+    justify-content: center;
+  }
 
+}
+
+@media screen and (max-width: 428px){
+  body{
+    display: grid;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .hero{
+    height: 735px;
+    width: fit-content;
+  }
+  .hero-right img {
+    width: 428px;
+    margin-top: 70px;
+  }
+  .navbar{
+    padding: 20px 20px;
+    flex-direction: row;
+    justify-content: left;
+    background-size: cover;
+    width: fit-content;
+    display: grid;
+  }
+
+  .navbar-nav .nav-link{
+    background-repeat: no-repeat;
+    padding: 20px 22px;
+    font-weight: 700;
+    background-size: 80px 50px;
+  }
   
+  .hero{
+    padding: 0;
+    display: grid;
+    background-size: auto;
+  }
+  .hero-left {
+    margin: 0;
+    padding: 0;
+    font-size: 110%;
+    text-align: center;
+  }
+  .navbar-nav{
+    margin-left: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero .hero-left .search-field input {
+    width: 210px;
+    background-size: 40px;
+  }
+  .hero .hero-left .search-field{
+    width: 280px;
+    background-size: 40px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-left: 70px;
+  }
+  .why-section{
+    display: grid;
+    flex-wrap: wrap;
+
+  }
+
+  .first-why-content {
+    width: 300px;
+    height: auto;
+  }
+  .second-why{
+    width: 400px;
+    height: auto;
+  }
 }

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return response.json().then((data) => {
       console.log(data);
       result = data[0];
-      document.getElementById("physics").textContent = result.fisika;
+      document.getElementById("physics").textContent = result.fisika.tofixed(2);
     });
   });
 });

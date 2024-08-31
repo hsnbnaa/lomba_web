@@ -23,27 +23,14 @@
           <h5 id="email">fauzi.fuzzy@gmail.com</h5>
         </div>
         <nav class="navbar">
-          <ul>
-            <li>
-              <a href="#"><img src="img/kelas-icon.png" alt="" />KelasKu</a>
-            </li>
-            <li>
-              <a href="#"><img src="img/nilaiku-icon.png" alt="" />NilaiKu</a>
-            </li>
-            <li>
-              <a href="#"><img src="img/chat-icon.png" alt="" />Chat</a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="img/liveclass-icon.png" alt="" />Live Class</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img src="img/pengaturan-icon.png" alt="" />Pengaturan</a
-              >
-            </li>
-          </ul>
+          <a href="profil" class="kelasku"
+            ><img src="img/kelasku-active.png" />KelasKu</a
+          >
+          <a href="academic.html"><img src="img/nilaiku.png" />NilaiKu</a>
+          <a href="#"><img src="img/chat-icon.png" />Chat</a>
+          <a href="#"><img src="img/liveclass-icon.png" />Tutorin</a>
+
+          <a href="#"><img src="img/pengaturan-icon.png" />Pengaturan</a>
         </nav>
       </main>
     </aside>
@@ -197,5 +184,14 @@
     </div>
 
     <script src="js/profil.js"></script>
+    <script>
+      document.addEventListener("click", function () {
+        const mapelContainer = document.querySelectorAll(".kotak21, kotak31");
+
+        mapelContainer.forEach((mapel) => {
+          window.location.href = "kelasku.html";
+        });
+      });
+    </script>
   </body>
 </html>

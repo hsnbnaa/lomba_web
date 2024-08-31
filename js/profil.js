@@ -6,25 +6,26 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("email").textContent = email;
   const token = localStorage.getItem("token");
 
-  fetch("http://127.0.0.1:8000/mapel").then((response) => {
-    response.json().then((data) => {
-      container = document.getElementById("card-container");
-      container.innerHTML = "";
+  fetch("https://backendlomba-production.up.railway.app/mapel").then(
+    (response) => {
+      response.json().then((data) => {
+        container = document.getElementById("card-container");
+        container.innerHTML = "";
 
-      data.forEach((result, index) => {
-        const tipeKartu =
-          index % 8 === 0 ||
-          index % 8 === 3 ||
-          index % 8 === 4 ||
-          index % 8 === 7
-            ? "kotak21"
-            : "kotak31";
+        data.forEach((result, index) => {
+          const tipeKartu =
+            index % 8 === 0 ||
+            index % 8 === 3 ||
+            index % 8 === 4 ||
+            index % 8 === 7
+              ? "kotak21"
+              : "kotak31";
 
-        const card = document.createElement("div");
-        card.classList.add(tipeKartu);
+          const card = document.createElement("div");
+          card.classList.add(tipeKartu);
 
-        if (tipeKartu === "kotak21") {
-          card.innerHTML = `
+          if (tipeKartu === "kotak21") {
+            card.innerHTML = `
                 <div>
                   <div class="sub">
                     <h4>${result.mapel}</h4>
@@ -39,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
                   <img src="${result.url_gambar}" width="90px" alt="" />
                 </div>
               `;
-        } else {
-          card.innerHTML = `
+          } else {
+            card.innerHTML = `
                 <div class="gambar1">
                   <img src="${result.url_gambar}" width="90px" />
                 </div>
@@ -55,17 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
                   </div>
                 </div>
               `;
-        }
-        card.style.backgroundColor = `#${result.warna}`;
-        container.appendChild(card);
+          }
+          card.style.backgroundColor = `#${result.warna}`;
+          container.appendChild(card);
+        });
       });
-    });
-  });
+    }
+  );
 
-  fetch(`http://127.0.0.1:8000/token/${token}`).then((response) => {
-    response.json().then((data) => {
-      result = data[0];
-      document.getElementById("kelas").textContent = result.kelas;
-    });
-  });
+  fetch(`https://backendlomba-production.up.railway.app/token/${token}`).then(
+    (response) => {
+      response.json().then((data) => {
+        result = data[0];
+        document.getElementById("kelas").textContent = result.kelas;
+      });
+    }
+  );
 });

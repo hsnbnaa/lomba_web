@@ -183,13 +183,16 @@ function handleSignup() {
       }
 
       try {
-        const response = await fetch("http://127.0.0.1:8000/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
+        const response = await fetch(
+          "https://backendlomba-production.up.railway.app/register",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -265,7 +268,9 @@ function showLastStep() {
 
 async function loadProvinsi() {
   try {
-    const response = await fetch("http://127.0.0.1:8000/provinsi"); // Endpoint API untuk mendapatkan provinsi
+    const response = await fetch(
+      "https://backendlomba-production.up.railway.app/provinsi"
+    ); // Endpoint API untuk mendapatkan provinsi
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -288,7 +293,9 @@ async function loadKota() {
   const provinsi = document.getElementById("provinsi").value;
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/kota?provinsi=${encodeURIComponent(provinsi)}`
+      `https://backendlomba-production.up.railway.app/kota?provinsi=${encodeURIComponent(
+        provinsi
+      )}`
     ); // Endpoint API untuk mendapatkan kota
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -312,7 +319,9 @@ async function loadSekolah() {
   const kota = document.getElementById("kota").value;
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/sekolah?kota=${encodeURIComponent(kota)}`
+      `https://backendlomba-production.up.railway.app/sekolah?kota=${encodeURIComponent(
+        kota
+      )}`
     ); // Endpoint API untuk mendapatkan sekolah
     if (!response.ok) {
       throw new Error("Network response was not ok");

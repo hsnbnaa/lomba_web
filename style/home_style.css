@@ -795,3 +795,47 @@ body {
     margin-right: 60px;
   }
 }
+
+
+@media screen and (max-width: 768px){
+  .logo-icon{
+    margin-top: 80px;
+  }
+  .logo-icon a img {
+    width: 92px;
+    height: 88px;
+    margin-right: 10px;
+  }
+  .logo-icon a {
+    font-size: 28px;
+  }
+  .hero{
+    width: 140%;
+    height: 735px;
+  }
+  .navbar{
+    width: 127%;
+  }
+  .navbar-nav{
+    margin-top: 80px;
+  }
+  .navbar-nav a{
+    font-size: 18px;
+  }
+  .navbar-nav .nav-link{
+    background-size: 145px 70px;
+    background-repeat: no-repeat;
+    padding: 20px 35px;
+    font-weight: 700;
+  }
+  .hero-right img {
+    width: 700px;
+    margin-top: 130px;
+  }
+  .hero-left {
+    margin-top: 130px;
+    font-size: 120%;
+  }
+
+  
+}

@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(data);
       result = data[0];
       document.getElementById("physics").textContent = result.fisika.toFixed(2);
+      document.getElementById("rata-rata").textContent =
+        result.fisika.toFixed(2);
     });
   });
 });

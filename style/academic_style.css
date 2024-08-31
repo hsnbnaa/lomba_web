@@ -156,7 +156,7 @@ ul {
 .top-info {
   display: flex;
   flex-direction: row;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .top-info h4 {
@@ -170,7 +170,7 @@ ul {
 .info-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 60px;
 }
 
 .rata-nilai {
@@ -232,6 +232,7 @@ ul {
 
 .score {
   display: flex;
+  cursor: pointer;
   flex-direction: row;
   justify-content: space-between;
   padding: 6px 72px 5px 47px;

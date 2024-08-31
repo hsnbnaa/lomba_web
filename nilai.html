@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style/nilai_style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" style="cursor: pointer">
       <img src="img/back-button.png" class="back-button" alt="Back Button" />
       <h2 class="title">Detail Nilai</h2>
     </header>
@@ -23,11 +23,38 @@
           <h4>Nilai</h4>
         </div>
         <div class="score">
-          <h5>Tugas 1</h5>
-          <h5 id="math">70.00</h5>
+          <h5>Ulangan 1</h5>
+          <h5 id="ul-1">70.00</h5>
+        </div>
+        <div class="score">
+          <h5>Ulangan 2</h5>
+          <h5 id="ul-2">70.00</h5>
+        </div>
+        <div class="score">
+          <h5>Ulangan 3</h5>
+          <h5 id="ul-3">70.00</h5>
+        </div>
+        <div class="score">
+          <h5>Ulangan 4</h5>
+          <h5 id="ul-4">70.00</h5>
+        </div>
+        <div class="score">
+          <h5>UTS</h5>
+          <h5 id="uts">70.00</h5>
+        </div>
+        <div class="score">
+          <h5>UAS</h5>
+          <h5 id="uas">70.00</h5>
         </div>
       </section>
     </main>
     <script src="js/nilai.js"></script>
+    <script>
+      const backButton = document.querySelector(".header");
+
+      backButton.addEventListener("click", function () {
+        window.location.href = "academic.html";
+      });
+    </script>
   </body>
 </html>

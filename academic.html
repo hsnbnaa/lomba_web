@@ -46,13 +46,26 @@
           </div>
           <div class="info-content">
             <h4>Jumlah Mapel <span id="jumlah-mapel">XX</span></h4>
-            <h4>Peringkat Kelas XX</h4>
-            <h4>Proggress XX</h4>
+            <h4>Peringkat Kelas 1</h4>
           </div>
+          <h4
+            style="
+              font-size: 20px;
+              font-weight: 700;
+              color: #00a3ff;
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 20px;
+              margin-right: 25px;
+              cursor: pointer;
+            "
+          >
+            Leaderboard Kelas
+          </h4>
         </section>
         <section class="rata-nilai">
           <h3>Nilai Rata - rata</h3>
-          <h3 class="rata-rata">xxxx</h3>
+          <h3 class="rata-rata" id="rata-rata">xxxx</h3>
         </section>
       </div>
       <section class="nilai-siswa">
@@ -63,12 +76,21 @@
             <h4>Nilai</h4>
           </div>
           <div class="score">
-            <h5>Fisika</h5>
+            <h5 id="fisika">Fisika</h5>
             <h5 id="physics">70.00</h5>
           </div>
         </article>
       </section>
     </main>
     <script src="js/academic.js"></script>
+    <script>
+      const nilai = document.querySelectorAll(".score");
+
+      nilai.forEach((item) => {
+        item.addEventListener("click", function () {
+          window.location.href = "nilai.html";
+        });
+      });
+    </script>
   </body>
 </html>
